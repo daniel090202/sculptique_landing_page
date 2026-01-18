@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-lora: 'Lora', sans-serif;
+  --font-nunito: 'Nunito', sans-serif;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('./assets/fonts/Lora-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('./assets/fonts/Lora-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer utilities {
+  .font-lora {
+    font-family: 'Lora', sans-serif;
+  }
+
+  .font-nunito {
+    font-family: 'Nunito', sans-serif;
+  }
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+body {
+  margin: 0;
+
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-color: #ffffff;
+}
