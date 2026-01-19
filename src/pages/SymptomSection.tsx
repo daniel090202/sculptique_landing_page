@@ -2,6 +2,10 @@ import { SymptomGroup } from "../components";
 
 import SymptomImage06 from "../assets/images/symptom_section/symptom_image_06.webp";
 import SymptomImage07 from "../assets/images/symptom_section/symptom_image_07.webp";
+import SymptomImage08 from "../assets/images/symptom_section/symptom_image_08.webp";
+import SymptomImage09 from "../assets/images/symptom_section/symptom_image_09.webp";
+import SymptomImage10 from "../assets/images/symptom_section/symptom_image_10.webp";
+import SymptomImage11 from "../assets/images/symptom_section/symptom_image_11.webp";
 
 import CheckIconImage from "../assets/images/common/check_image_icon.webp";
 import CrossIconImage from "../assets/images/common/cross_image_icon.webp";
@@ -9,7 +13,6 @@ import DoubleArrowImage from "../assets/images/common/double_arrow_icon.webp";
 
 import DrainageImageDesktop01 from "../assets/images/symptom_section/drainage_image_desktop_01.webp";
 import DrainageImageDesktop02 from "../assets/images/symptom_section/drainage_image_desktop_02.webp";
-import { X } from "lucide-react";
 
 const SymptomSection = () => {
   const DrainageSection01 = () => {
@@ -48,11 +51,15 @@ const SymptomSection = () => {
     ];
 
     return (
-      <div className={"flex items-start justify-between gap-[100px]"}>
+      <div
+        className={
+          "flex flex-col flex-col-reverse md:flex-row items-start justify-between gap-[16px] md:gap-[100px]"
+        }
+      >
         <div className={"flex-1 mx-auto bg-white"}>
           <p
             className={
-              "my-[8px] text-[18px] font-nunito font-[400] leading-[1.3em]"
+              "my-[8px] text-[16px] md:text-[18px] font-nunito font-[400] leading-[1.3em]"
             }
           >
             Your lymphatic system is your body's internal cleaning crew—a
@@ -64,7 +71,7 @@ const SymptomSection = () => {
 
           <p
             className={
-              "my-[8px] text-[18px] font-nunito font-[400] leading-[1.3em]"
+              "my-[8px] text-[16px] md:text-[18px] font-nunito font-[400] leading-[1.3em]"
             }
           >
             {"When it's working properly, you don't even know it exists."}
@@ -79,7 +86,11 @@ const SymptomSection = () => {
                   className={"w-[20px] h-[20px] object-cover"}
                 />
 
-                <p className="text-[18px] font-nunito font-[400] leading-[1.3em] text-[#0c7c00] font-semibold">
+                <p
+                  className={
+                    "text-[16px] md:text-[18px] font-nunito font-[400] leading-[1.3em] text-[#0c7c00] font-semibold"
+                  }
+                >
                   {item.title}
                 </p>
               </div>
@@ -93,7 +104,7 @@ const SymptomSection = () => {
           >
             <p
               className={
-                "my-[8px] text-[18px] font-nunito font-[400] leading-[1.3em]"
+                "my-[8px] text-[16px] md:text-[18px] font-nunito font-[400] leading-[1.3em]"
               }
             >
               {
@@ -111,7 +122,11 @@ const SymptomSection = () => {
                   className={"w-[20px] h-[20px] object-cover"}
                 />
 
-                <p className="text-[18px] font-nunito font-[400] leading-[1.3em] text-[#a60003] font-semibold">
+                <p
+                  className={
+                    "text-[16px] md:text-[18px] font-nunito font-[400] leading-[1.3em] text-[#a60003] font-semibold"
+                  }
+                >
                   {item.title}
                 </p>
               </div>
@@ -120,7 +135,7 @@ const SymptomSection = () => {
 
           <p
             className={
-              "my-[8px] text-[18px] font-nunito font-[600] leading-[1.3em]"
+              "my-[8px] text-[16px] md:text-[18px] font-nunito font-[600] leading-[1.3em]"
             }
           >
             {
@@ -131,9 +146,11 @@ const SymptomSection = () => {
 
         <div className={"flex-1"}>
           <img
-            src={DrainageImageDesktop01}
-            alt={"drainage_image_desktop_01"}
-            className={"w-[570px] h-[478px] object-cover"}
+            src={SymptomImage10}
+            alt={"drainage_image_desktop_10"}
+            className={
+              "w-[360px] h-[302px] md:w-[570px] md:h-[478px] object-cover"
+            }
           />
         </div>
       </div>
@@ -161,8 +178,12 @@ const SymptomSection = () => {
     ];
 
     return (
-      <div className={"py-[56px] flex items-start justify-between gap-[100px]"}>
-        <div className={"flex-1"}>
+      <div
+        className={
+          "py-[56px] flex flex-col md:flex-row items-start justify-between gap-[16px] md:gap-[100px]"
+        }
+      >
+        <div className={"hidden md:block flex-1"}>
           <img
             src={DrainageImageDesktop02}
             alt={"drainage_image_desktop_02"}
@@ -170,16 +191,26 @@ const SymptomSection = () => {
           />
         </div>
 
+        <div className={"md:hidden flex-1"}>
+          <img
+            src={SymptomImage11}
+            alt={"drainage_image_desktop_02"}
+            className={"w-[360px] h-[240px] object-cover"}
+          />
+        </div>
+
         <div className={"flex-1 mx-auto bg-white"}>
           <h2
-            className={"text-[18px] font-nunito font-extrabold leading-[1.3em]"}
+            className={
+              "text-[16px] md:text-[18px] font-nunito font-extrabold leading-[1.3em]"
+            }
           >
             {"And it accumulates. Day after day. Week after week."}
           </h2>
 
           <p
             className={
-              "my-[8px] text-[18px] font-nunito font-[400] leading-[1.3em]"
+              "my-[8px] text-[16px] md:text-[18px] font-nunito font-[400] leading-[1.3em]"
             }
           >
             That gallon of fluid your body should be draining every 24 hours?
@@ -194,7 +225,7 @@ const SymptomSection = () => {
           >
             <p
               className={
-                "my-[8px] text-[18px] font-nunito font-[400] leading-[1.3em]"
+                "my-[8px] text-[16px] md:text-[18px] font-nunito font-[400] leading-[1.3em]"
               }
             >
               The metabolic waste your cells produce overnight? It's still
@@ -211,7 +242,11 @@ const SymptomSection = () => {
                     className={"w-[20px] h-[20px] object-cover"}
                   />
 
-                  <p className="text-[18px] font-nunito font-[400] leading-[1.3em] text-[#a60003] font-semibold">
+                  <p
+                    className={
+                      "text-[16px] md:text-[18px] font-nunito font-[400] leading-[1.3em] text-[#a60003] font-semibold"
+                    }
+                  >
                     {item.title}
                   </p>
                 </li>
@@ -222,7 +257,7 @@ const SymptomSection = () => {
           {/* Conclusion */}
           <p
             className={
-              "my-[8px] text-[18px] font-nunito font-[700] leading-[1.3em]"
+              "my-[8px] text-[16px] md:text-[18px] font-nunito font-[700] leading-[1.3em]"
             }
           >
             Your cells are literally sitting in their own waste—and your body
@@ -231,7 +266,7 @@ const SymptomSection = () => {
 
           <p
             className={
-              "my-[8px] text-[18px] font-nunito font-[400] leading-[1.3em]"
+              "my-[8px] text-[16px] md:text-[18px] font-nunito font-[400] leading-[1.3em]"
             }
           >
             The longer this goes on, the worse it gets. More congestion. More
@@ -243,7 +278,11 @@ const SymptomSection = () => {
   };
 
   return (
-    <section className={"pt-[56px] max-w-[1240px] mx-auto"}>
+    <section
+      className={
+        "px-[15px] pt-[32px] md:px-0 md:pt-[56px] max-w-[1240px] mx-auto"
+      }
+    >
       <div
         className={
           "font-lora text-[32px] text-center font-[400] leading-[1.3em]"
@@ -270,7 +309,7 @@ const SymptomSection = () => {
 
       <SymptomGroup />
 
-      <div className={"flex items-center justify-center"}>
+      <div className={"hidden md:block flex items-center justify-center"}>
         <img
           src={SymptomImage06}
           alt={"symptom_image_06"}
@@ -278,24 +317,32 @@ const SymptomSection = () => {
         />
       </div>
 
+      <div className={"mt-[24px] md:hidden flex items-center justify-center"}>
+        <img
+          src={SymptomImage08}
+          alt={"symptom_image_06"}
+          className={"max-w-[420px] h-[145px] object-cover"}
+        />
+      </div>
+
       <div className={"my-[24px] mx-auto flex items-center justify-center"}>
         <img
           src={DoubleArrowImage}
           alt={"double-arrow"}
-          className={"w-[48px] h-[65px] object-cover"}
+          className={"w-[34px] h-[46px] md:w-[48px] md:h-[65px] object-cover"}
         />
       </div>
 
       <h2
         className={
-          "my-[16px] text-center text-[32px] font-[400] font-lora leading-[1.3em]"
+          "my-[16px] text-center text-[24px] md:text-[32px] font-[400] font-lora leading-[1.3em]"
         }
       >
         {"The Connection "}
         <span className={"text-[#039869]"}>You've Been Missing</span>
       </h2>
 
-      <div className={"flex items-center justify-center"}>
+      <div className={"hidden md:block flex items-center justify-center"}>
         <img
           src={SymptomImage07}
           alt={"symptom_image_07"}
@@ -303,17 +350,25 @@ const SymptomSection = () => {
         />
       </div>
 
+      <div className={"md:hidden flex items-center justify-center"}>
+        <img
+          src={SymptomImage09}
+          alt={"symptom_image_07"}
+          className={"w-[360px] h-[373px] object-cover"}
+        />
+      </div>
+
       <div className={"my-[24px] mx-auto flex items-center justify-center"}>
         <img
           src={DoubleArrowImage}
           alt={"double-arrow"}
-          className={"w-[48px] h-[65px] object-cover"}
+          className={"w-[34px] h-[46px] md:w-[48px] md:h-[65px] object-cover"}
         />
       </div>
 
       <h2
         className={
-          "my-[16px] text-center text-[32px] font-[400] font-lora leading-[1.3em]"
+          "my-[16px] text-center text-[24px] md:text-[32px] font-[400] font-lora leading-[1.3em]"
         }
       >
         Your <span className={"text-[#039869]"}>Hidden</span> Drainage System

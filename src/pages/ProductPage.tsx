@@ -18,13 +18,13 @@ const ProductPage = () => {
     <>
       <HighlightSection />
 
-      {/* <AutoScrollBanner />
+      <AutoScrollBanner />
 
       <SymptomSection />
 
       <NoThingHasWorkedSection />
 
-      <IngredientSection />
+      {/* <IngredientSection />
 
       <CustomerReviewSection />
 

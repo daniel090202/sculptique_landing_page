@@ -8,20 +8,22 @@ const SymptomCard: React.FC<{ symptom: SymptomCard }> = ({ symptom }) => {
   return (
     <div
       className={
-        "bg-white rounded-lg overflow-hidden transition-shadow duration-300 space-y-[10px]"
+        "flex items-center md:flex-col bg-white rounded-[8px] overflow-hidden md:space-y-[10px]"
       }
     >
-      <div className={"aspect-[4/3] overflow-hidden"}>
+      <div className={"h-full flex-1 overflow-hidden"}>
         <img
           src={symptom.image}
           alt={`Symptom ${symptom.id}`}
-          className={
-            "w-full h-[184px] object-cover hover:scale-105 transition-transform duration-300"
-          }
+          className={"w-[180px] h-[150px] md:w-full md:h-[184px] object-cover"}
         />
       </div>
 
-      <div className={"p-[16px] min-h-[150px] bg-[#f7f7f7] rounded-b-[6px]"}>
+      <div
+        className={
+          "flex-1 p-[16px] min-h-[150px] bg-[#f7f7f7] md:rounded-b-[6px]"
+        }
+      >
         <p
           className={
             "text-[16px] font-nunito font-[400] text-center leading-relaxed"

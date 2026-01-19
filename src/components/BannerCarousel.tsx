@@ -22,7 +22,7 @@ const AutoScrollBanner: React.FC<{ className?: string }> = ({ className }) => {
     >
       <h2
         className={
-          "text-center text-[24px] font-nunito text-gray-800 mb-[20px]"
+          "text-center text-[18px] md:text-[24px] font-trirong text-gray-800 mb-[20px]"
         }
       >
         {"As Seen In"}
@@ -33,13 +33,13 @@ const AutoScrollBanner: React.FC<{ className?: string }> = ({ className }) => {
           {[...brands, ...brands].map((brand, index) => (
             <div
               key={index}
-              className="flex-shrink-0 mx-12 flex items-center justify-center"
+              className="flex-shrink-0 mx-6 md:mx-12 flex items-center justify-center"
             >
               <img
                 src={brand}
                 alt={brand}
                 className={
-                  "h-[30px] font-serif tracking-wider text-gray-700 whitespace-nowrap"
+                  "h-[20px] md:h-[30px] font-serif tracking-wider text-gray-700 whitespace-nowrap"
                 }
               />
             </div>
