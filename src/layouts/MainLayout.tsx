@@ -7,7 +7,7 @@ const MainLayout = () => {
     <>
       <Header />
 
-      <main className={"relative py-[32px] space-y-[32px]"}>
+      <main className={"relative pt-[32px] space-y-[32px]"}>
         <ProductPage />
       </main>
     </>

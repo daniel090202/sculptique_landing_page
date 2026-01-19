@@ -78,20 +78,28 @@ const RightHighlightSection = () => {
   ];
 
   return (
-    <div className={"flex-1 flex flex-col space-y-[16px] max-w-[588px]"}>
+    <div
+      className={
+        "px-[15px] flex-1 flex flex-col space-y-[16px] max-w-[588px] md:px-0"
+      }
+    >
       <div className={"flex items-center space-x-[16px]"}>
         <img
           src={RatingStarsImage}
           alt={RatingStarsImage}
-          className={"w-[100px]"}
+          className={"w-[60px] md:w-[100px]"}
         />
 
-        <span className={"font-nunito"}>
+        <span
+          className={
+            "text-[12px] font-nunito md:text-[28px] md:font-lora font-[400]"
+          }
+        >
           {"4.8/5 Excellent | Based on 2381 Reviews"}
         </span>
       </div>
 
-      <h1 className={"text-[28px] font-lora font-[400]"}>
+      <h1 className={"text-[24px] font-[400] md:text-[28px] md:my-0 font-lora"}>
         {
           "New Maximum Potency Formula - Lymphatic Drainage Capsules by Sculptique™"
         }
@@ -99,13 +107,16 @@ const RightHighlightSection = () => {
 
       <div className={"grid grid-cols-1 gap-[16px]"}>
         {benefits.map((benefit) => (
-          <div key={benefit.key} className={"flex items-center gap-x-[16px]"}>
+          <div
+            key={benefit.key}
+            className={"gap-[12px] flex items-center md:gap-x-[16px]"}
+          >
             <img
               src={benefit.image}
               alt={benefit.title}
-              className={"w-[52px] object-cover"}
+              className={"w-[34px] md:w-[52px] object-cover"}
             />
-            <span className={"text-[16px]font-nunito"}>{benefit.title}</span>
+            <span className={"text-[16px] font-nunito"}>{benefit.title}</span>
           </div>
         ))}
       </div>
@@ -203,7 +214,7 @@ const RightHighlightSection = () => {
             id={"close-button"}
             aria-label={"Click to minimize banner"}
             className={
-              "absolute top-[-2px] right-[-33px] p-[6px] rounded-full bg-[#E0E0E0] cursor-pointer"
+              "hidden absolute top-[-2px] right-[-33px] p-[6px] rounded-full bg-[#E0E0E0] cursor-pointer md:block"
             }
           >
             <svg
@@ -225,7 +236,7 @@ const RightHighlightSection = () => {
       <PricingSection />
 
       <div className={"flex items-center space-x-[8px]"}>
-        <span>
+        <span className={"md:w-[29px] md:h-[18px] w-[18px] h-[10px]"}>
           <svg
             width="33"
             height="18"
@@ -253,7 +264,7 @@ const RightHighlightSection = () => {
           </svg>
         </span>
         <div>
-          <p className={"text-[16px] font-nunito font-semibold"}>
+          <p className={"text-[12px] md:text-[16px] font-nunito font-semibold"}>
             {"Delivered on "}
             <span
               className={
