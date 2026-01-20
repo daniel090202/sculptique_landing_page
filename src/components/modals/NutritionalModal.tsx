@@ -7,13 +7,13 @@ interface NutritionModalProps {
   onClose: () => void;
 }
 
-interface Ingredient {
-  name: string;
-  amount: string;
-  unit: string;
-  isItalic?: boolean;
-  isIndented?: boolean;
-}
+// interface Ingredient {
+//   name: string;
+//   amount: string;
+//   unit: string;
+//   isItalic?: boolean;
+//   isIndented?: boolean;
+// }
 
 const NutritionModal = ({ isOpen, onClose }: NutritionModalProps) => {
   if (!isOpen) return null;
