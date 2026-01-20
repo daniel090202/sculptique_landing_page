@@ -1,5 +1,4 @@
 import React from "react";
-import { Truck, Download, Gift } from "lucide-react";
 
 import PricingGroup01 from "../assets/images/highlight_section/pricing_group_01.webp";
 import PricingGroup02 from "../assets/images/highlight_section/pricing_group_02.webp";

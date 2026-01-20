@@ -18,49 +18,6 @@ interface Ingredient {
 const NutritionModal = ({ isOpen, onClose }: NutritionModalProps) => {
   if (!isOpen) return null;
 
-  const ingredients: Ingredient[] = [
-    {
-      name: "Echinacea purpurea Extract (whole plant)",
-      amount: "500",
-      unit: "mg",
-      isItalic: true,
-    },
-    { name: "Dandelion Extract (leaf)", amount: "250", unit: "mg" },
-    { name: "Burdock Powder (root)", amount: "200", unit: "mg" },
-    {
-      name: "Cleavers Extract (Galium aparine) (whole herb)",
-      amount: "100",
-      unit: "mg",
-      isItalic: true,
-    },
-    {
-      name: "Rutin (Sophora japonica) (whole flower bud)",
-      amount: "100",
-      unit: "mg",
-      isItalic: true,
-    },
-    {
-      name: "Bromelain Powder (Ananas comosus) (stem)",
-      amount: "100",
-      unit: "mg",
-      isItalic: true,
-    },
-    { name: "(Not < 2,400 GDU/g)", amount: "", unit: "", isIndented: true },
-    { name: "Lemon Peel Powder (peel)", amount: "50", unit: "mg" },
-    {
-      name: "Kelp Extract (Laminaria japonica)",
-      amount: "30",
-      unit: "mg",
-      isItalic: true,
-    },
-    {
-      name: "(std. to 10% fucoxanthin)",
-      amount: "",
-      unit: "",
-      isIndented: true,
-    },
-  ];
-
   return (
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50">
       <div className="bg-white rounded-[12px] shadow-2xl max-w-[450px] p-[16px] w-full relative">

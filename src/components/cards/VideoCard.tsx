@@ -1,5 +1,3 @@
-import { Play } from "lucide-react";
-
 import React, { useState, useRef, useEffect } from "react";
 
 import PlayButtonImage from "../../assets/images/common/play_button_image.webp";
@@ -20,6 +18,8 @@ const VideoCard: React.FC<VideoCardProps> = ({ video, isActive }) => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [canPlay, setCanPlay] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+
+  console.log(error);
 
   const videoRef = useRef<HTMLVideoElement>(null);
 

@@ -15,7 +15,7 @@ interface TestimonialProps {
 const TestimonialCard: React.FC<TestimonialProps> = ({
   name = "Margaret Ellison",
   location = "FL",
-  rating = 5,
+  // rating = 5,
   title = "Even my husband noticed... the spark came back.",
   content = "After years of hiding under coverups, picking apart my body, and feeling disconnected, I finally feel at ease again. I feel less bloated, lighter, like my body is working with me not against me. These past months, I've been present. Even my marriage feels renewed, not just in how I look but in how I feel. It's hard to explain, but once you try it you'll get it. I'd recommend this to my closest friends without question.",
   avatarUrl = "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",

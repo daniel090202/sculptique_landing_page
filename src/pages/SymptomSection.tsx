@@ -11,7 +11,7 @@ import CheckIconImage from "../assets/images/common/check_image_icon.webp";
 import CrossIconImage from "../assets/images/common/cross_image_icon.webp";
 import DoubleArrowImage from "../assets/images/common/double_arrow_icon.webp";
 
-import DrainageImageDesktop01 from "../assets/images/symptom_section/drainage_image_desktop_01.webp";
+// import DrainageImageDesktop01 from "../assets/images/symptom_section/drainage_image_desktop_01.webp";
 import DrainageImageDesktop02 from "../assets/images/symptom_section/drainage_image_desktop_02.webp";
 
 const SymptomSection = () => {
