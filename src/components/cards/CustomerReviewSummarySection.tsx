@@ -52,7 +52,11 @@ const CustomerReviewSummarySection: React.FC<
   };
 
   return (
-    <div className="flex items-center gap-3 mb-2">
+    <div
+      className={
+        "w-full flex items-center gap-3 mb-2 cursor-pointer hover:opacity-80"
+      }
+    >
       <div className={"flex items-center"}>{renderStars()}</div>
 
       <div className={"flex-1 bg-[#e0e0e080] h-[14px] overflow-hidden"}>
@@ -87,15 +91,19 @@ const CustomerReviews: React.FC = () => {
   return (
     <div>
       <h2
-        className={
-          "text-[24px] font-nunito font-semibold text-center mb-[24px]"
-        }
+        className={"text-[24px] font-trirong font-[400] text-center mb-[24px]"}
       >
         {"Customer Reviews"}
       </h2>
 
-      <div className={"flex items-center justify-between gap-8 items-start"}>
-        <div className={"flex-1"}>
+      <div
+        className={
+          "flex flex-col justify-center lg:flex-row items-center lg:justify-between gap-8 lg:items-start"
+        }
+      >
+        <div
+          className={"flex-1 w-full flex flex-col items-center justify-center"}
+        >
           <div className={"flex items-center gap-[6px]"}>
             <div className={"flex items-center"}>
               {Array.from({ length: 5 }, (_, index) => {
@@ -154,7 +162,11 @@ const CustomerReviews: React.FC = () => {
           </div>
         </div>
 
-        <div className={"flex-1 flex flex-col gap-0"}>
+        <div
+          className={
+            "flex-1 flex flex-col gap-0 w-full items-center justify-center md:max-w-[320px] lg:max-w-full"
+          }
+        >
           {ratings.map((rating) => (
             <CustomerReviewSummarySection
               key={rating.stars}
@@ -165,7 +177,9 @@ const CustomerReviews: React.FC = () => {
           ))}
         </div>
 
-        <div className={"h-full flex-1 flex items-center justify-center"}>
+        <div
+          className={"h-full w-full flex-1 flex items-center justify-center"}
+        >
           <button
             className={
               "max-w-[240px] w-full bg-[#FA8A8A] font-nunito text-[16px] leading-[1.3em] font-[800] text-center hover:opacity-80 text-white py-[10px] px-[20px] transition-colors duration-200 cursor-pointer"

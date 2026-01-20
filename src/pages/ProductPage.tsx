@@ -24,7 +24,7 @@ const ProductPage = () => {
 
       <NoThingHasWorkedSection />
 
-      {/* <IngredientSection />
+      <IngredientSection />
 
       <CustomerReviewSection />
 
@@ -38,7 +38,7 @@ const ProductPage = () => {
 
       <EffectSection />
 
-      <AdviceSection /> */}
+      <AdviceSection />
     </>
   );
 };

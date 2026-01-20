@@ -105,19 +105,21 @@ const IngredientCardTable: React.FC<{ className?: string }> = ({
   ];
 
   return (
-    <div
-      className={`border border-black rounded-xl overflow-hidden ${className}`}
-    >
-      <div className={"grid grid-cols-4"}>
-        {ingredientsData.slice(0, 4).map((ingredient) => (
-          <IngredientCard key={ingredient.id} data={ingredient} />
-        ))}
-      </div>
+    <div className={"px-[15px] md:px-0"}>
+      <div
+        className={`border border-black rounded-xl overflow-hidden ${className}`}
+      >
+        <div className={"grid grid-cols-1 md:grid-cols-4"}>
+          {ingredientsData.slice(0, 4).map((ingredient) => (
+            <IngredientCard key={ingredient.id} data={ingredient} />
+          ))}
+        </div>
 
-      <div className={"grid grid-cols-4"}>
-        {ingredientsData.slice(4, 8).map((ingredient) => (
-          <IngredientCard data={ingredient} />
-        ))}
+        <div className={"grid grid-cols-1 md:grid-cols-4"}>
+          {ingredientsData.slice(4, 8).map((ingredient) => (
+            <IngredientCard data={ingredient} />
+          ))}
+        </div>
       </div>
     </div>
   );

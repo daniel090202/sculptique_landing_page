@@ -12,11 +12,11 @@ const FrequentlyAskedQuesionCard: React.FC<{
   onToggle: () => void;
 }> = ({ item, isOpen, onToggle }) => {
   return (
-    <div className={"border-b border-white "}>
+    <div className={"border-b border-white"}>
       <button
         onClick={onToggle}
         className={
-          "w-full flex items-center justify-between py-5 px-6 text-left transition-colors cursor-pointer"
+          "w-full flex items-center justify-between py-[16px] md:py-5 md:px-6 text-left transition-colors cursor-pointer"
         }
       >
         <p className="text-[18px] font-nunito font-[500] pr-8">

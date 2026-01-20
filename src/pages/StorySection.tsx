@@ -79,7 +79,7 @@ const VideoCarousel: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-[1240px] mx-auto p-6">
+    <div className="w-full max-w-[1240px] mx-auto px-[15px] md:p-6">
       <div
         ref={scrollContainerRef}
         className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4"
@@ -96,7 +96,7 @@ const VideoCarousel: React.FC = () => {
       </div>
 
       <div className={"mt-[12px] flex justify-between items-center"}>
-        <div className="relative w-full max-w-[1001px] h-1 bg-[#00000026] rounded-full overflow-hidden">
+        <div className="relative w-full max-w-[280px] md:max-w-[1001px] h-1 bg-[#00000026] rounded-full overflow-hidden">
           <div
             className={
               "absolute h-full bg-[#039869] rounded-full transition-all duration-300 ease-out"
@@ -106,7 +106,7 @@ const VideoCarousel: React.FC = () => {
               left: `${(activeIndex * 100) / videos.length}%`,
             }}
           />
-          {/* Clickable zones */}
+
           <div className="absolute inset-0 flex">
             {videos.map((_, index) => (
               <button
@@ -139,7 +139,7 @@ const VideoCarousel: React.FC = () => {
       <div className={"mt-[24px] flex flex-col items-center"}>
         <button
           className={
-            "mt-[24px] text-[18px] font-nunito max-w-[450px] bg-black text-white px-[80px] py-[18px] font-[600] rounded-[4px] hover:opacity-80 transition-colors duration-200 cursor-pointer"
+            "w-full p-[16px] mt-[24px] text-[18px] font-nunito md:max-w-[450px] bg-black text-white md:px-[80px] md:py-[18px] font-[600] rounded-[4px] hover:opacity-80 transition-colors duration-200 cursor-pointer"
           }
         >
           Try Lymphatic Drainage Risk-Free
@@ -180,7 +180,11 @@ const StorySection = () => {
           />
         </div>
 
-        <h2 className={"font-lora text-[32px] font-[500] my-[16px]"}>
+        <h2
+          className={
+            "font-lora text-center md:text-left text-[24px] md:text-[32px] font-[500] my-[16px]"
+          }
+        >
           {"See The Stories of Sculptique™ Women Firsthand"}
         </h2>
 

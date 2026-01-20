@@ -53,7 +53,7 @@ const SymptomSection = () => {
     return (
       <div
         className={
-          "flex flex-col flex-col-reverse md:flex-row items-start justify-between gap-[16px] md:gap-[100px]"
+          "flex flex-col flex-col-reverse md:flex-row md:items-center lg:items-start justify-between gap-[16px] md:gap-[100px]"
         }
       >
         <div className={"flex-1 mx-auto bg-white"}>
@@ -144,12 +144,12 @@ const SymptomSection = () => {
           </p>
         </div>
 
-        <div className={"flex-1"}>
+        <div className={"h-full flex-1"}>
           <img
             src={SymptomImage10}
             alt={"drainage_image_desktop_10"}
             className={
-              "w-[360px] h-[302px] md:w-[570px] md:h-[478px] object-cover"
+              "w-[360px] h-[302px] md:w-[310px] md:h-[260px] lg:w-[570px] lg:h-[478px] object-cover"
             }
           />
         </div>
@@ -180,14 +180,16 @@ const SymptomSection = () => {
     return (
       <div
         className={
-          "py-[56px] flex flex-col md:flex-row items-start justify-between gap-[16px] md:gap-[100px]"
+          "md:py-[56px] flex flex-col md:flex-row md:items-center lg:items-start justify-between gap-[16px] md:gap-[100px]"
         }
       >
         <div className={"hidden md:block flex-1"}>
           <img
             src={DrainageImageDesktop02}
             alt={"drainage_image_desktop_02"}
-            className={"w-[570px] h-[380px] object-cover"}
+            className={
+              "md:w-[310px] md:h-[207px] lg:w-[570px] lg:h-[380px] object-cover"
+            }
           />
         </div>
 
@@ -254,7 +256,6 @@ const SymptomSection = () => {
             </ul>
           </div>
 
-          {/* Conclusion */}
           <p
             className={
               "my-[8px] text-[16px] md:text-[18px] font-nunito font-[700] leading-[1.3em]"
@@ -280,12 +281,12 @@ const SymptomSection = () => {
   return (
     <section
       className={
-        "px-[15px] pt-[32px] md:px-0 md:pt-[56px] max-w-[1240px] mx-auto"
+        "px-[15px] pt-[32px] md:px-0 md:pt-[56px] max-w-[1240px] mx-auto md:px-[50px] lg:px-0"
       }
     >
       <div
         className={
-          "font-lora text-[32px] text-center font-[400] leading-[1.3em]"
+          "font-lora text-[24px] md:text-[32px] text-center font-[500] leading-[1.3em]"
         }
       >
         <h2>
@@ -298,7 +299,11 @@ const SymptomSection = () => {
           {"Actually Connected"}
         </h2>
 
-        <p className={"text-[18px] font-nunito my-[16px] leading-[1.3em]"}>
+        <p
+          className={
+            "text-[16px] md:text-[18px] font-[500] font-nunito my-[16px] leading-[1.3em]"
+          }
+        >
           {
             "If you're experiencing more than one of these symptoms, your body is trying to tell you"
           }
@@ -309,11 +314,13 @@ const SymptomSection = () => {
 
       <SymptomGroup />
 
-      <div className={"hidden md:block flex items-center justify-center"}>
+      <div className={"hidden md:flex w-full items-center justify-center"}>
         <img
           src={SymptomImage06}
           alt={"symptom_image_06"}
-          className={"w-[920px] h-[195px] object-cover"}
+          className={
+            "w-[668px] h-[141px] lg:w-[920px] lg:h-[195px] object-cover"
+          }
         />
       </div>
 
@@ -342,11 +349,13 @@ const SymptomSection = () => {
         <span className={"text-[#039869]"}>You've Been Missing</span>
       </h2>
 
-      <div className={"hidden md:block flex items-center justify-center"}>
+      <div className={"hidden md:flex items-center justify-center"}>
         <img
           src={SymptomImage07}
           alt={"symptom_image_07"}
-          className={"w-[920px] h-[551px] object-cover"}
+          className={
+            "w-[668px] h-[400px] lg:w-[920px] lg:h-[551px] object-cover"
+          }
         />
       </div>
 

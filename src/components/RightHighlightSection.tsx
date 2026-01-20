@@ -90,16 +90,12 @@ const RightHighlightSection = () => {
           className={"w-[60px] md:w-[100px]"}
         />
 
-        <span
-          className={
-            "text-[12px] font-nunito md:text-[28px] md:font-lora font-[400]"
-          }
-        >
+        <span className={"text-[12px] font-nunito md:text-[16px] font-[400]"}>
           {"4.8/5 Excellent | Based on 2381 Reviews"}
         </span>
       </div>
 
-      <h1 className={"text-[24px] font-[400] md:text-[28px] md:my-0 font-lora"}>
+      <h1 className={"text-[24px] font-[500] md:text-[28px] md:my-0 font-lora"}>
         {
           "New Maximum Potency Formula - Lymphatic Drainage Capsules by Sculptique™"
         }

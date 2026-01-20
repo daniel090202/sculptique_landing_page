@@ -2,19 +2,44 @@ import MoneyBackImageIcon from "../assets/images/common/money_back_icon.webp";
 import AdviceBannerImage from "../assets/images/advice_section/advice_banner_image.webp";
 import AdviceImage from "../assets/images/advice_section/advice_thumbnail.webp";
 
+import AdviceMobileImage01 from "../assets/images/advice_section/advice_mobile_image_01.webp";
+import AdviceMobileImage02 from "../assets/images/advice_section/advice_mobile_image_02.webp";
+
 const AdviceSection = () => {
   return (
-    <section className={"py-[56px] bg-[#f3eee0]"}>
-      <div className={"max-w-[1240px] mx-auto grid grid-cols-4 gap-[64px]"}>
-        <div className={"col-span-2 flex items-center justify-center"}>
+    <section className={"py-[32px] md:py-[56px] bg-[#f3eee0]"}>
+      <div
+        className={
+          "px-[15px] md:px-[50px] lg:px-0 max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-[64px]"
+        }
+      >
+        <div
+          className={
+            "col-span-1 md:col-span-2 flex items-center justify-center"
+          }
+        >
           <div>
             <img
               src={AdviceBannerImage}
               alt={"Advice Banner Image"}
-              className={"w-[350px] h-[21px] object-cover"}
+              className={
+                "hidden md:block md:w-[328px] md:h-[20px] lg:w-[350px] lg:h-[21px] object-cover"
+              }
             />
 
-            <h2 className={"font-lora text-[32px] font-[500] my-[16px]"}>
+            <div className={"w-full flex items-center justify-center"}>
+              <img
+                src={AdviceMobileImage01}
+                alt={"Advice Banner Image"}
+                className={"md:hidden w-[250px] h-[37px] object-cover"}
+              />
+            </div>
+
+            <h2
+              className={
+                "font-lora text-[24px] md:text-[32px] font-[500] my-[16px]"
+              }
+            >
               Stop Masking Symptoms. Start Restoring Root Cause.
             </h2>
 
@@ -30,9 +55,15 @@ const AdviceSection = () => {
               Not symptom masking. Complete lymphatic restoration.
             </p>
 
+            <img
+              src={AdviceMobileImage02}
+              alt={AdviceMobileImage02}
+              className={"md:hidden w-[384px] h-[384px] object-cover"}
+            />
+
             <button
               className={
-                "mt-[24px] text-[18px] font-nunito max-w-[450px] bg-black text-white px-[80px] py-[18px] font-[700] rounded-[4px] hover:opacity-80 transition-colors duration-200"
+                "w-full p-[16px] mt-[24px] text-[18px] font-nunito md:max-w-[450px] bg-black text-white md:px-[80px] md:py-[18px] font-[600] rounded-[4px] hover:opacity-80 transition-colors duration-200 cursor-pointer"
               }
             >
               Try Lymphatic Drainage Risk-Free
@@ -48,6 +79,7 @@ const AdviceSection = () => {
                 alt={"Money Back Icon"}
                 className={"w-[24px] h-[24px] object-cover"}
               />
+
               <span className={"text-[16px] font-nunito font-[500]"}>
                 {"60-Day Money-Back Guarantee"}
               </span>
@@ -57,13 +89,15 @@ const AdviceSection = () => {
 
         <div
           className={
-            "col-span-2 flex items-center justify-center rounded-[24px] overflow-hidden"
+            "hidden md:block col-span-1 md:col-span-2 flex h-full md:flex-col items-center justify-center rounded-[24px] overflow-hidden"
           }
         >
           <img
             src={AdviceImage}
             alt={AdviceImage}
-            className={"w-[568px] h-[568px] object-cover"}
+            className={
+              "hidden md:block lg:w-[568px] lg:h-[568px] md:w-[328px] md:h-[328px] object-cover"
+            }
           />
         </div>
       </div>

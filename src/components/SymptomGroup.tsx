@@ -40,11 +40,7 @@ const SymptomGroup = () => {
   ];
 
   return (
-    <div
-      className={
-        "mt-[40px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-[16px]"
-      }
-    >
+    <div className={"mt-[40px] grid grid-cols-1 md:grid-cols-5 gap-[16px]"}>
       {symptoms.map((symptom) => (
         <SymptomCard key={symptom.id} symptom={symptom} />
       ))}

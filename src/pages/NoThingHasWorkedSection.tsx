@@ -3,6 +3,7 @@ import { NoThingHasWorkedCard } from "../components";
 import NothingHasWorkedImage01 from "../assets/images/symptom_section/nothing_has_worked_image_01.webp";
 import NothingHasWorkedImage02 from "../assets/images/symptom_section/nothing_has_worked_image_02.webp";
 import NothingHasWorkedImage03 from "../assets/images/symptom_section/nothing_has_worked_image_03.webp";
+import NothingHasWorkedImage04 from "../assets/images/symptom_section/nothing_has_worked_image_04.webp";
 
 import MoneyBackImageIcon from "../assets/images/common/money_back_icon.webp";
 import DrainageImageDesktop03 from "../assets/images/symptom_section/drainage_image_desktop_03.webp";
@@ -43,7 +44,7 @@ const NoThingHasWorkedSection = () => {
     return (
       <div
         className={
-          "mt-[40px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px]"
+          "mt-[40px] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-[16px]"
         }
       >
         {cardsData.map((card) => (
@@ -54,11 +55,15 @@ const NoThingHasWorkedSection = () => {
   };
 
   return (
-    <section className={"bg-[#f7f2e7] pb-[70px] mt-[35px]"}>
+    <section
+      className={
+        "bg-[#f7f2e7] pb-[70px] mt-[35px] px-[15px] md:px-[50px] lg:px-0"
+      }
+    >
       <div className={"max-w-[1240px] mx-auto"}>
         <h2
           className={
-            "my-[16px] font-lora text-[32px] font-[450] leading-[1.3em] text-center"
+            "my-[16px] font-lora text-[24px] md:text-[32px] font-[450] leading-[1.3em] text-center"
           }
         >
           Why Nothing Has <span className={"text-[#039869]"}>Worked</span>
@@ -66,18 +71,28 @@ const NoThingHasWorkedSection = () => {
 
         {HealthMythCardsSection()}
 
-        <div className={"flex items-center justify-center"}>
+        <div className={"hidden md:flex md:items-center md:justify-center"}>
           <img
             src={DrainageImageDesktop03}
             alt={"drainage_image"}
-            className={"w-[920px] h-[218px] object-cover"}
+            className={
+              "md:w-[720px] md:h-[158px] lg:w-[920px] lg:h-[218px] object-cover"
+            }
+          />
+        </div>
+
+        <div className={"mt-[24px] md:hidden items-center justify-center"}>
+          <img
+            src={NothingHasWorkedImage04}
+            alt={"drainage_image"}
+            className={"w-full h-[199px] object-cover"}
           />
         </div>
 
         <div className={"flex flex-col items-center justify-center"}>
           <button
             className={
-              "mt-[24px] py-[18px] px-[80px] bg-black text-white rounded-[4px] font-nunito font-[800] text-[18px] cursor-pointer hover:opacity-80"
+              "mt-[24px] w-full md:w-fit p-[16px] md:py-[18px] md:px-[80px] bg-black text-white rounded-[4px] font-nunito font-[800] text-[16px] md:text-[18px] cursor-pointer hover:opacity-80"
             }
           >
             {"Try Lymphatic Drainage Risk-Free"}

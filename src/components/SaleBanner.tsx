@@ -20,9 +20,7 @@ const Feature: React.FC<FeatureProps> = ({ imageUrl, title, description }) => {
         className={"w-fit h-[40px] object-cover mb-[16px]"}
       />
 
-      <p className={"font-semibold text-[16px] font-nunito my-[8px]"}>
-        {title}
-      </p>
+      <p className={"font-[700] text-[16px] font-nunito my-[8px]"}>{title}</p>
 
       <p className={"text-[16px] font-nunito font-[400]"}>{description}</p>
     </div>
@@ -57,7 +55,7 @@ const SaleBanner: React.FC = () => {
     <div className={"w-full bg-[#f3eee0] py-[32px]"}>
       <div
         className={
-          "max-w-[1240px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4"
+          "px-[15px] md:px-[50px] lg:px-0 max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-4"
         }
       >
         {features.map((feature, index) => (

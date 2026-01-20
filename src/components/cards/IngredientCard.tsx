@@ -41,32 +41,36 @@ const IngredientCard: React.FC<IngredientCardProps> = ({ data }) => {
         </h3>
       </div>
 
-      <div className={"my-[12px] flex justify-center items-center"}>
-        <img
-          src={data.image}
-          alt={data.name}
-          className={"max-w-[120px] max-h-[80px] object-contain"}
-        />
+      <div className={"flex items-center md:flex-col gap-[16px]"}>
+        <div className={"my-[12px] flex justify-center items-center"}>
+          <img
+            src={data.image}
+            alt={data.name}
+            className={
+              "max-w-[69px] max-h-[69px] md:max-w-[120px] md:max-h-[80px] object-contain"
+            }
+          />
+        </div>
+
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className={
+            "w-full flex items-center md:items-start justify-between gap-[8px] text-left group transition-colors"
+          }
+        >
+          <p
+            className={"flex-1 text-[16px] font-nunito font-[600]"}
+          >{`${data.name} ${data.dosage}`}</p>
+
+          <img
+            src={SingleDownArrowIcon}
+            alt={"Single Down Arrow Icon"}
+            className={`w-[24px] h-[12px] text-gray-400 transition-transform duration-200 flex-shrink-0 cursor-pointer ${
+              isExpanded ? "rotate-180" : ""
+            }`}
+          />
+        </button>
       </div>
-
-      <button
-        onClick={() => setIsExpanded(!isExpanded)}
-        className={
-          "w-full flex items-start justify-between gap-[8px] text-left group transition-colors"
-        }
-      >
-        <p
-          className={"flex-1 text-[16px] font-nunito font-[600]"}
-        >{`${data.name} ${data.dosage}`}</p>
-
-        <img
-          src={SingleDownArrowIcon}
-          alt={"Single Down Arrow Icon"}
-          className={`w-[24px] h-[12px] text-gray-400 transition-transform duration-200 flex-shrink-0 cursor-pointer ${
-            isExpanded ? "rotate-180" : ""
-          }`}
-        />
-      </button>
 
       {/* Expanded Details */}
       {isExpanded && data.details && (

@@ -8,10 +8,14 @@ const SymptomCard: React.FC<{ symptom: SymptomCard }> = ({ symptom }) => {
   return (
     <div
       className={
-        "flex items-center md:flex-col bg-white rounded-[8px] overflow-hidden md:space-y-[10px]"
+        "flex items-center md:flex-col md:items-start md:justify-start bg-white rounded-[8px] overflow-hidden md:space-y-[10px]"
       }
     >
-      <div className={"h-full flex-1 overflow-hidden"}>
+      <div
+        className={
+          "flex-1 h-full md:max-h-[184px] lg:h-full lg:flex-1 overflow-hidden"
+        }
+      >
         <img
           src={symptom.image}
           alt={`Symptom ${symptom.id}`}
@@ -21,7 +25,7 @@ const SymptomCard: React.FC<{ symptom: SymptomCard }> = ({ symptom }) => {
 
       <div
         className={
-          "flex-1 p-[16px] min-h-[150px] bg-[#f7f7f7] md:rounded-b-[6px]"
+          "h-[150px] flex-1 md:flex-0 lg:flex-1 p-[16px] md:h-full lg:min-h-[150px] bg-[#f7f7f7] md:rounded-b-[6px]"
         }
       >
         <p

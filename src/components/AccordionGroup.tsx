@@ -35,7 +35,7 @@ const AccordionGroup: React.FC<AccordionGroupProps> = ({
 
         <div
           className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer ${
-            isOpen ? "rotate-180" : ""
+            isOpen ? "rotate-45" : ""
           }`}
         >
           <img

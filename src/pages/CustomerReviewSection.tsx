@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 import {
   CustomerReviewCard,
   CustomerReviewSummarySection,
+  Pagination,
 } from "../components";
 
 import DiamondAuthenticity from "../assets/images/customer_review_section/diamond_authenticity.webp";
@@ -91,22 +92,33 @@ const CustomerReviewSection = () => {
     );
   };
 
+  const [currentPage, setCurrentPage] = useState<number>(1);
+
+  const handlePageChange = (page: number): void => {
+    setCurrentPage(page);
+    console.log("Page changed to:", page);
+  };
+
   return (
-    <section className={"max-w-[1240px] mx-auto bg-white py-[56px]"}>
+    <section
+      className={"max-w-[1240px] mx-auto bg-white py-[56px] px-[15px] md:px-0"}
+    >
       <div
         className={
-          "flex flex-col items-center justify-center space-y-[16px] max-w-[800px] mx-[220px]"
+          "flex flex-col items-center justify-center space-y-[16px] md:max-w-[800px] md:mx-[220px]"
         }
       >
-        <img
-          src={CustomerReviewHeaderImage}
-          alt={"Customer Review Header Image"}
-          className={"w-[200px] h-[19px] object-cover"}
-        />
+        <div className={"w-full flex items-center justify-center"}>
+          <img
+            src={CustomerReviewHeaderImage}
+            alt={"Customer Review Header Image"}
+            className={"w-[200px] h-[19px] object-cover"}
+          />
+        </div>
 
         <h2
           className={
-            "font-lora text-[32px] leading-[1.3em] font-[400] text-center"
+            "font-lora text-[24px] md:text-[32px] leading-[1.3em] font-[500] text-center"
           }
         >
           Real Women, Real Results: 93,000+
@@ -116,7 +128,7 @@ const CustomerReviewSection = () => {
 
         <p
           className={
-            "font-nunito text-[18px] leading-[1.3em] font-normal text-center"
+            "font-nunito text-[16px] md:text-[18px] leading-[1.3em] font-normal text-center"
           }
         >
           {"All reviews verified from actual paying customers"}
@@ -145,12 +157,20 @@ const CustomerReviewSection = () => {
         </div>
       </div>
 
-      <div>
+      <div className={"py-[24px] px-[16px] md:px-[50px] lg:px-[16px]"}>
         <SortDropdown sortBy={sortBy} onSortChange={setSortBy} />
 
         {reviews.map((review) => (
           <CustomerReviewCard key={review.id} review={review} />
         ))}
+      </div>
+
+      <div className={"flex items-center justify-center"}>
+        <Pagination
+          currentPage={currentPage > 3 ? 1 : currentPage}
+          totalPages={3}
+          onPageChange={handlePageChange}
+        />
       </div>
     </section>
   );

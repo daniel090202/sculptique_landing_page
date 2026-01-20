@@ -5,16 +5,24 @@ const ExpertAdviceSection = () => {
   return (
     <section
       className={
-        "w-full bg-qwhite py-[56px] max-w-[1340px] mx-auto flex items-center min-h-[552px]"
+        "px-[15px] py-[32px] px-[50px] lg:px-0 w-full bg-white md:py-[56px] max-w-[1340px] mx-auto flex flex-col flex-col-reverse md:flex-row items-center min-h-[552px]"
       }
     >
       {/* Left Content */}
-      <div className={"h-full flex-1 p-[32px] bg-[#f7f7f7] rounded-l-[12px]"}>
+      <div
+        className={
+          "h-full flex-1 p-[16px] md:p-[32px] bg-[#f7f7f7] md:rounded-l-[12px]"
+        }
+      >
         <p className={"text-gray-500 text-[16px] font-nunito"}>
           July 4th, 2025
         </p>
 
-        <h1 className={"text-[32px] font-lora font-[400] my-[16px]"}>
+        <h1
+          className={
+            "text-[24px] md:text-[32px] font-lora font-[500] my-[16px]"
+          }
+        >
           Expert Advice from Dr. Emily Chen of a Premier New York Skin Clinic
         </h1>
 
@@ -37,7 +45,7 @@ const ExpertAdviceSection = () => {
 
         <button
           className={
-            "mt-[24px] text-[18px] font-nunito max-w-[450px] bg-black text-white px-[80px] py-[18px] font-[600] rounded-[4px] hover:opacity-80 transition-colors duration-200 cursor-pointer"
+            "w-full mt-[24px] text-[16px] md:text-[18px] font-nunito md:max-w-[450px] bg-black text-white p-[16px] md:px-[80px] md:py-[18px] font-[600] rounded-[4px] hover:opacity-80 transition-colors duration-200 cursor-pointer"
           }
         >
           Try Lymphatic Drainage Risk-Free
@@ -62,7 +70,9 @@ const ExpertAdviceSection = () => {
         <img
           src={ExpertAdviceThumbnail}
           alt={"Expert Advice Thumbnail"}
-          className={"w-full h-[564px] object-cover rounded-r-[12px]"}
+          className={
+            "w-full h-[315px] md:h-[984px] lg:h-[564px] object-cover rounded-r-[12px]"
+          }
         />
       </div>
     </section>

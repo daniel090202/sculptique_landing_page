@@ -15,7 +15,9 @@ const NoThingHasWorkedCard: React.FC<NoThingHasWorkedCardProps> = ({
   data,
 }) => {
   return (
-    <div className={"bg-white rounded-[6px] overflow-hidden"}>
+    <div
+      className={"bg-white rounded-[6px] overflow-hidden md:h-fit lg:h-full"}
+    >
       <div className="relative">
         <img
           src={data.image}
@@ -25,13 +27,17 @@ const NoThingHasWorkedCard: React.FC<NoThingHasWorkedCardProps> = ({
       </div>
 
       <div className={"p-[24px]"}>
-        <p className="text-[20px] font-nunito font-[600] leading-[1.3em] text-center mb-6">
+        <p
+          className={
+            "text-[24px] font-trirong font-[400] leading-[1.3em] text-center mb-6"
+          }
+        >
           {data.title}
         </p>
 
         <div
           className={
-            "mt-[24px] min-h-[180px] bg-[#ffe3e3] rounded-[6px] py-[8px] px-[16px]"
+            "mt-[24px] h-fit md:min-h-[180px] bg-[#ffe3e3] rounded-[6px] py-[8px] px-[16px]"
           }
         >
           <div className={"flex items-center justify-center gap-2 mb-3"}>

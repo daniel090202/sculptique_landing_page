@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import type { EmblaCarouselType } from "embla-carousel";
 
-// Import images của bạn
 import ProductThumbnailImage from "../assets/images/highlight_section/product_thumbnail_image.webp";
 import ThumbnailProductSaleBanner from "../assets/images/highlight_section/thumbnail_product_sale_banner.webp";
 import HighLightImage01 from "../assets/images/highlight_section/highlight_image_01.webp";
@@ -12,6 +11,12 @@ import HighLightImage04 from "../assets/images/highlight_section/highlight_image
 import HighLightImage05 from "../assets/images/highlight_section/highlight_image_05.webp";
 import HighLightImage06 from "../assets/images/highlight_section/highlight_image_06.webp";
 import HighLightImage07 from "../assets/images/highlight_section/highlight_image_07.webp";
+
+import LeafImageIcon from "../assets/images/common/leaf_image_icon.webp";
+import NutritionModal from "./modals/NutritionalModal";
+
+import WhiteLeftButtonImage from "../assets/images/common/white_left_arrow_button.webp";
+import WhiteRightButtonImage from "../assets/images/common/white_right_arrow_button.webp";
 
 interface ImageItem {
   src: string;
@@ -54,33 +59,67 @@ const LeftHighlightSection: React.FC = () => {
     { src: HighLightImage07, alt: "Highlight 7" },
   ];
 
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const handleOpenModal = (): void => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = (): void => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <div className="px-[15px] w-full flex-1 flex flex-col space-y-[16px] md:px-0 md:max-w-[588px]">
+    <div className="px-[15px] w-full flex-1 flex flex-col space-y-[16px] md:px-0 md:max-w-[219px] lg:max-w-[588px]">
       {/* Desktop Layout */}
       <div className="hidden md:flex md:flex-col md:space-y-[16px]">
         <div className="relative">
           <img
             src={ProductThumbnailImage}
             alt="Product Thumbnail Image"
-            className="w-[588px] h-[588px] object-cover rounded-[8px]"
+            className="md:w-[219px] md:h-[219px] lg:w-[588px] lg:h-[588px] object-cover rounded-[8px]"
           />
           <img
             src={ThumbnailProductSaleBanner}
             alt="Sale Banner On Product Thumbnail Image"
-            className="absolute top-[16px] right-[48px] w-[120px] h-[120px] object-cover"
+            className="absolute md:top-[16px] md:right-[12px] lg:top-[16px] lg:right-[48px] w-[120px] h-[120px] object-cover"
           />
+
+          <div
+            onClick={handleOpenModal}
+            className={
+              "cursor-pointer absolute bottom-[24px] md:left-0 md:right-0 lg:left-1/2 lg:-translate-x-1/2 flex items-center bg-[#ffffffd9] px-[24px] py-[8px] rounded-[24px] border border-black gap-[8px]"
+            }
+          >
+            <img
+              src={LeafImageIcon}
+              alt={"Leaf Image Icon"}
+              className={
+                "md:w-[24px] md:h-[24px] lg:w-[24px] lg:h-[24px] object-cover rounded-[8px]"
+              }
+            />
+
+            <span
+              className={
+                "flex-1 md:text-[14px] lg:text-[14px] font-montserrat text-center"
+              }
+            >
+              {"Nutritional Information"}
+            </span>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 gap-x-[16px]">
           <img
             src={HighLightImage01}
             alt="Highlight Image 01"
-            className="w-[286px] h-[286px] object-cover rounded-[8px]"
+            className=" object-cover rounded-[8px]"
           />
+
           <img
             src={HighLightImage02}
             alt="Highlight Image 02"
-            className="w-[286px] h-[286px] object-cover rounded-[8px]"
+            className=" object-cover rounded-[8px]"
           />
         </div>
 
@@ -118,7 +157,7 @@ const LeftHighlightSection: React.FC = () => {
 
       <div className="md:hidden">
         <div className="overflow-hidden mb-3" ref={emblaRef}>
-          <div className="flex">
+          <div className="relative flex gap-4">
             {allImages.map((image, index) => (
               <div key={index} className="flex-[0_0_100%] min-w-0 relative">
                 <img
@@ -126,6 +165,7 @@ const LeftHighlightSection: React.FC = () => {
                   alt={image.alt}
                   className="w-[384px] h-[384px] aspect-square object-cover rounded-[8px]"
                 />
+
                 {image.hasBanner && (
                   <img
                     src={ThumbnailProductSaleBanner}
@@ -135,6 +175,39 @@ const LeftHighlightSection: React.FC = () => {
                 )}
               </div>
             ))}
+
+            <div className="absolute top-1/2 -translate-y-1/2 left-[20px] w-[32px] h-[32px] object-cover cursor-pointer">
+              <img
+                src={WhiteLeftButtonImage}
+                alt={"White Left Button Image"}
+                className="w-[32px] h-[32px] object-cover"
+              />
+            </div>
+
+            <div className="absolute top-1/2 -translate-y-1/2 right-[20px] w-[32px] h-[32px] object-cover cursor-pointer">
+              <img
+                src={WhiteRightButtonImage}
+                alt={"White Right Button Image"}
+                className="w-[32px] h-[32px] object-cover"
+              />
+            </div>
+
+            <div
+              onClick={handleOpenModal}
+              className={
+                "max-w-[290px] absolute bottom-[24px] left-[60px] flex items-center bg-[#ffffffd9] px-[24px] py-[8px] rounded-[24px] border border-black gap-[8px]"
+              }
+            >
+              <img
+                src={LeafImageIcon}
+                alt={"Leaf Image Icon"}
+                className={"w-[24px] h-[24px] object-cover rounded-[8px]"}
+              />
+
+              <span className={"block text-[14px] font-montserrat text-nowrap"}>
+                {"Nutritional Information"}
+              </span>
+            </div>
           </div>
         </div>
 
@@ -169,6 +242,8 @@ const LeftHighlightSection: React.FC = () => {
           scrollbar-width: none;
         }
       `}</style>
+
+      <NutritionModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

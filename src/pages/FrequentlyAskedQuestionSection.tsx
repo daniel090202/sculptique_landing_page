@@ -75,14 +75,20 @@ Sculptique uses capsules with therapeutic doses (100-500mg per ingredient) that 
   };
 
   return (
-    <section className={"max-w-[1340px] mx-auto flex flex-col items-center"}>
-      <h2 className={"text-[32px] font-lora font-[500] my-[16px]"}>
+    <section
+      className={
+        "mt-[32px] max-w-[1340px] mx-auto flex flex-col items-center px-[15px] md:px-[50px] lg:px-0"
+      }
+    >
+      <h2
+        className={"text-[24px] md:text-[32px] font-lora font-[500] my-[16px]"}
+      >
         {"Frequently Asked Questions"}
       </h2>
 
       <div
         className={
-          "max-w-[824px] bg-gradient-to-b from-white to-[#f3eee0] p-[32px] rounded-[16px]"
+          "max-w-[824px] bg-gradient-to-b from-white to-[#f3eee0] p-[16px] md:p-[32px] rounded-[16px]"
         }
       >
         {faqData.map((item) => (
@@ -97,7 +103,7 @@ Sculptique uses capsules with therapeutic doses (100-500mg per ingredient) that 
 
       <button
         className={
-          "mt-[24px] text-[18px] font-nunito max-w-[450px] bg-black text-white px-[80px] py-[18px] font-[700] rounded-[4px] hover:opacity-80 transition-colors duration-200"
+          "w-full mt-[24px] text-[16px] md:text-[18px] font-nunito md:max-w-[450px] bg-black text-white p-[16px] md:px-[80px] md:py-[18px] font-[600] rounded-[4px] hover:opacity-80 transition-colors duration-200 cursor-pointer"
         }
       >
         Try Lymphatic Drainage Risk-Free
